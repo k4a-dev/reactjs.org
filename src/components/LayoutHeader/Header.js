@@ -153,6 +153,8 @@ const Header = ({location}: {location: Location}) => (
               to={link.to}
             />
           ))}
+
+          <HeaderLink title="BETA" to="https://beta.reactjs.org" />
         </nav>
 
         <DocSearch />

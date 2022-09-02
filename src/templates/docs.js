@@ -5,6 +5,7 @@
  */
 
 import MarkdownPage from 'components/MarkdownPage';
+import BetaNavigator from 'components/BetaNavigator/BetaNavigator';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {graphql} from 'gatsby';
@@ -20,6 +21,7 @@ const Docs = ({data, location}) => (
       markdownRemark={data.markdownRemark}
       sectionList={sectionListDocs}
       titlePostfix=" &ndash; React"
+      news={<BetaNavigator />}
     />
   </Layout>
 );

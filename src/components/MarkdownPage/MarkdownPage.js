@@ -32,6 +32,7 @@ type Props = {
   markdownRemark: Node,
   sectionList: Array<Object>, // TODO: Add better flow type once we have the Section component
   titlePostfix: string,
+  news?: React.Component,
 };
 
 const getPageById = (sectionList: Array<Object>, templateFile: ?string) => {
@@ -56,6 +57,7 @@ const MarkdownPage = ({
   markdownRemark,
   sectionList,
   titlePostfix = '',
+  news,
 }: Props) => {
   const hasAuthors = authors.length > 0;
   const titlePrefix = markdownRemark.frontmatter.title || '';
@@ -113,6 +115,8 @@ const MarkdownPage = ({
                   )}
                 </div>
               )}
+
+              <div css={{marginTop: '1rem'}}>{news}</div>
 
               <div css={sharedStyles.articleLayout.content}>
                 <div
